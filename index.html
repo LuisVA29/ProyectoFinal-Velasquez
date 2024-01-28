@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#bla"  />
+    <title>PIZZERIA</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  
+  <body>
+    <header class="container-fluid bg-white top-0">
+      <ul
+      class="nav nav-pills pt-3 container"
+      id="pills-tab"
+      role="tablist"
+    >
+      <li class="nav-item text-primary" role="presentation">
+        <a
+          class="nav-link active"
+          id="pills-pizza-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-pizza"
+          type="button"
+          role="tab"
+          aria-controls="pills-pizza"
+          aria-selected="true"
+          >PIZZAS</a
+        >
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link"
+          id="pills-bebida-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-bebida"
+          type="button"
+          role="tab"
+          aria-controls="pills-bebida"
+          aria-selected="false"
+          >BEBIDAS</a
+        >
+      </li>
+      <li class="nav-item ms-auto" role="presentation">
+        <a
+            class="nav-link"
+            id="pills-contact-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-contact"
+            type="button"
+            role="tab"
+            aria-controls="pills-contact"
+            aria-selected="false"
+        >
+            Carrito
+            <span id="carritoCantidad">0</span>
+        </a>
+    </li>
+    
+    </ul>
+    
+    </header>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active container"
+        id="pills-pizza"
+        role="tabpanel"
+        aria-labelledby="pills-pizza-tab"
+      >
+      <h2 class="h4 m-4 text-primary">PIZZAS</h2>
+
+      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1  rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Pizza de Pepperoni</h5>
+            <img src="./img/platillo1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+              <button  class="btn btn-primary button">Añadir a Carrito</button>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1  rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Pizza Hawaiana</h5>
+            <img src="./img/platillo2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+              <button  class="btn btn-primary button">Añadir a Carrito</button>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1  rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Pizza de Queso</h5>
+            <img src="./img/platillo3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+              <button  class="btn btn-primary button">Añadir a Carrito</button>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1  rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Pizza Vegetariana</h5>
+            <img src="./img/platillo4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text  description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+              <button  class="btn btn-primary button">Añadir a Carrito</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div
+        class="tab-pane fade show container"
+        id="pills-bebida"
+        role="tabpanel"
+        aria-labelledby="pills-bebida-tab"
+      >
+
+        <h2 class="h4 m-4 text-primary">BEBIDAS</h2>
+
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Coca Cola</h5>
+              <img src="./img/bebida1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">La bebida más famosa del mundo, con un sabor único y refrescante.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 2.50</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Jugo de Naranja</h5>
+              <img src="./img/bebida2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Una bebida natural y nutritiva, hecha con naranjas recién exprimidas.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 2.50</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Agua Pura</h5>
+              <img src="./img/bebida3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Una bebida esencial para la vida, que te hidrata y te limpia de impurezas.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 1.50</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1  rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Sprite</h5>
+              <img src="./img/bebida4.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text  description">Una bebida gaseosa de sabor lima-limón, ideal para calmar la sed.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 2.50</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade carrito"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+      >
+      <br>
+      <div class="carrito">
+        <h2 class="text-primary">Carrito de Compras</h2>
+        <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr class="text-primary">
+            <th scope="col">#</th>
+            <th scope="col">Productos</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          
+        
+          
+        </tbody>
+      </table>
+      <br><br>
+      <div class="row mx-4">
+        <div class="col">
+          <h3 class="itemCartTotal  ">Total: 0</h3>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <button class="btn btn-success">COMPRAR</button>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+
+    <footer>
+      <p class="text-center m-0 text-muted">Luis Velásquez</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
