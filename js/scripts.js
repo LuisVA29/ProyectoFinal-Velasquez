@@ -1,5 +1,15 @@
 const serverUrl = 'http://localhost:5173';
 
+function showNotification(message, type = 'success') {
+  Toastify({
+    text: message,
+    duration: 2000,
+    gravity: "bottom",
+    position: "left",
+    backgroundColor: type === 'success' ? "green" : "orange",
+  }).showToast();
+}
+
 const Clickbutton = document.querySelectorAll('.button');
 const tbody = document.querySelector('.tbody');
 const carritoCantidadElement = document.getElementById('carritoCantidad');
@@ -33,12 +43,14 @@ async function addToCarritoItem(newItem) {
       const inputValue = InputElemnto[i];
       inputValue.value++;
       await renderCarrito();
+      showNotification("Producto agregado con éxito");
       return null;
     }
   }
 
   carrito.push(newItem);
   await renderCarrito();
+  showNotification("Producto agregado con éxito");
 }
 
 async function renderCarrito() {
@@ -93,8 +105,8 @@ async function removeItemCarrito(title) {
   carrito.splice(index, 1);
   await renderCarrito();
   await removeItemFromServer(title);
+  showNotification("Producto eliminado con éxito", 'warning');
 }
-
 
 async function sumaCantidad(title, cantidad) {
   const index = carrito.findIndex(item => item.title === title);
@@ -112,15 +124,24 @@ window.onload = async function () {
     carrito = storage;
     await renderCarrito();
   }
-  await getItemsFromServer(); // Obtener ítems del servidor al cargar la página
+  await getItemsFromServer();
 };
 
 const comprarButton = document.querySelector('.btn-success');
 comprarButton.addEventListener('click', async function () {
   if (carrito.length === 0) {
-    alert('El carrito está vacío');
+    Swal.fire({
+      icon: 'warning',
+      title: '¡Atención!',
+      text: 'El carrito está vacío',
+    });
   } else {
-    // Realizar la lógica de compra si es necesario
-    alert('¡Gracias por su compra!');
+    Swal.fire({
+      icon: 'success',
+      title: '¡Gracias por su compra!',
+      text: 'Su pedido ha sido procesado con éxito.',
+    });
+    carrito = [];
+    await renderCarrito();
   }
 });
